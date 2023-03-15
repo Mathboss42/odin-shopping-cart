@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Nav Structure Should display heading and links 1`] = `
+<div>
+  <div
+    class="nav"
+  >
+    <h1>
+      CyberShop
+      <span
+        class="small-number"
+      >
+        2023
+      </span>
+    </h1>
+    <ul>
+      <li>
+        <a
+          href="/home"
+        >
+          HOME
+        </a>
+      </li>
+      <li
+        class="selected"
+      >
+        <a
+          href="/store"
+        >
+          STORE
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+`;

@@ -1,7 +1,7 @@
-function Terminal() {
+function Terminal(props) {
     return (
         <div className="terminal">
-            
+            {props.children}
         </div>
     );
 }

@@ -4,12 +4,12 @@ import Terminal from './Terminal';
 
 function Home() {
     return (
-    <div className="Home content-container">
-        <Nav selected={"Home"} />
-        <Terminal>
-
-        </Terminal>
-    </div>
+        <div className="home content-container">
+            <Nav selected={"Home"} />
+            <Terminal>
+                <div>nothing</div>
+            </Terminal>
+        </div>
     );
 }
 

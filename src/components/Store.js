@@ -1,12 +1,16 @@
 import Nav from "./Nav";
+import Terminal from "./Terminal";
+import Item from "./Item";
 
 function Store() {
     return (
-        <div className="Store content-container">
+        <div className="store content-container">
             <Nav selected="Store" />
-            <div className="terminal">
-
-            </div>
+            <Terminal>
+                <Item></Item>
+                <Item></Item>
+                <Item></Item>
+            </Terminal>
         </div>
     );
 }
