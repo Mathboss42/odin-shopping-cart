@@ -1,6 +1,6 @@
 function Item() {
     return (
-        <div className="item">
+        <div className='item'>
             asd
         </div>
     );

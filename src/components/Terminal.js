@@ -1,6 +1,6 @@
 function Terminal(props) {
     return (
-        <div className="terminal">
+        <div className='terminal'>
             {props.children}
         </div>
     );

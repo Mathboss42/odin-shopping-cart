@@ -39,7 +39,8 @@
 
 html, body {
     background-color:var(--cyber-deep-dark);
-    height: 100vh;
+    height: 100%;
+    overflow: auto;
 }
 
 .nav {
@@ -96,6 +97,7 @@ li {
 
 #root, .content-container {
     height: 100%;
+    overflow: auto;
 }
 
 .content-container {
@@ -103,7 +105,30 @@ li {
 }
 
 .terminal {
-    width: 100%;
-    height: 100%;
     border: 1px solid var(--cyber-blue);
+    padding: 50px;
+}
+
+h3 {
+    font-size: 32px;
+}
+
+p {
+    font-size: 24px;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.blocks-container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.text-block {
+    width: min(100%, 600px);
+}
+
+.text-block:nth-child(2n) {
+    align-self: flex-end;
 }
