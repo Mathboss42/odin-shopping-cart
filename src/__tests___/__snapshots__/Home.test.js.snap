@@ -75,6 +75,11 @@ exports[`Homepage Elements Contains three blocks of text inside terminal 1`] = `
           </p>
         </div>
       </div>
+      <div
+        class="serial"
+      >
+        16591B-77:a
+      </div>
     </div>
   </div>
 </div>

@@ -7,9 +7,14 @@ function Store() {
         <div className='store content-container'>
             <Nav selected='Store' />
             <Terminal>
-                <Item></Item>
-                <Item></Item>
-                <Item></Item>
+                <div className="item-category operating-system">
+                    <Item name='Sandevistan'/>
+                    <Item name='Cyberdeck'/>
+                </div>
+                <div className='item-category weapons'>
+                    <Item name='Mantis Blades'/>
+                    <Item name='Monowire'/>
+                </div>
             </Terminal>
         </div>
     );

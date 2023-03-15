@@ -24,6 +24,7 @@
 
 :root {
     --cyber-blue: rgb(0, 240, 255);
+    --cyber-deep-blue: rgb(0, 100, 107);
     --cyber-yellow: rgb(252, 238, 10);
     --cyber-deep-dark: black;
     --cyber-mid-dark: rgb(45, 55, 59);
@@ -95,6 +96,14 @@ li {
     padding: 0 6px;
 }
 
+li:hover > * {
+    color: white;
+}
+
+li:hover.selected {
+    border-color: white;
+}
+
 #root, .content-container {
     height: 100%;
     overflow: auto;
@@ -127,8 +136,29 @@ p {
 
 .text-block {
     width: min(100%, 600px);
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--cyber-yellow);
 }
 
 .text-block:nth-child(2n) {
     align-self: flex-end;
+}
+
+.serial {
+    text-align: end;
+    color: var(--cyber-blue);
+    transform: translate(45px, 50px);
+}
+
+button {
+    background-color: var(--cyber-blue);
+	border: none;
+	padding: 0px 10px;
+	font-size: 26px;
+	cursor: pointer;
+}
+
+button > div {
+	color: var(--cyber-deep-blue);
+    transform: translate(0, -5%);
 }
