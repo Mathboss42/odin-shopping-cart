@@ -1,0 +1,109 @@
+@font-face {
+    font-family: 'ChakraPetch';
+    src: url('./ChakraPetch-Bold.ttf');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('./Roboto-Medium.ttf');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto-Bold';
+    src: url('./Roboto-Bold.ttf');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cyberpunk';
+    src: url('./Cyberpunk.ttf');
+}
+
+:root {
+    --cyber-blue: rgb(0, 240, 255);
+    --cyber-yellow: rgb(252, 238, 10);
+    --cyber-deep-dark: black;
+    --cyber-mid-dark: rgb(45, 55, 59);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: whitesmoke;
+    font-family: ChakraPetch, 'Roboto', sans-serif;
+}
+
+html, body {
+    background-color:var(--cyber-deep-dark);
+    height: 100vh;
+}
+
+.nav {
+    user-select: none;
+    margin-bottom: 50px;
+}
+
+h1 {
+    font-family: 'Cyberpunk', sans-serif;
+    color: var(--cyber-yellow);
+    text-shadow: 2px 2px 0px var(--cyber-blue);
+    font-size: 3rem;
+    transform: translate(0, -5%);
+}
+
+.small-number {
+    text-shadow: none;
+    color: var(--cyber-blue);
+    font-family: sans-serif;
+    letter-spacing: -1px;
+    font-weight: 100;
+    font-size: x-large;
+    font-style: italic;
+    transform: translate(-35%, 70%);
+}
+
+.nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 24px;
+    font-size: x-large;
+}
+
+.nav h1 {
+    display: flex;
+    justify-content: center;
+    padding: 24px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--cyber-blue);
+}
+
+li.selected {
+    border: 1px solid var(--cyber-blue);
+}
+
+li {
+    border: 1px solid transparent;
+    padding: 0 6px;
+}
+
+#root, .content-container {
+    height: 100%;
+}
+
+.content-container {
+    padding: 50px;
+}
+
+.terminal {
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--cyber-blue);
+}
