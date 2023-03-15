@@ -6,7 +6,6 @@ import { createMemoryHistory } from '@remix-run/router';
 import { screen } from '@testing-library/react';
 import Store from '../components/Store';
 import '@testing-library/jest-dom'
-import { act } from 'react-test-renderer';
 
 describe('Show Cart', () => {
     it('Should display cart when \'show cart\' button is pressed', async () => {

@@ -119,6 +119,23 @@ li:hover.selected {
     padding: 50px;
 }
 
+.store-container.open-cart {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+.store-container {
+    position: relative;
+}
+
+#show-cart-button {
+    position: absolute;
+    top: 0;
+    left: 90%;
+    /* transform: translate(-100%); */
+}
+
 h3 {
     font-size: 32px;
 }
@@ -208,4 +225,22 @@ img {
     display: block;
     width: min(40%, 192px);
     height: min(40%, 192px);
+}
+
+.cart {
+    background-color: var(--cyber-yellow);
+    padding: 16px;
+}
+
+.cart * {
+    color: var(--cyber-deep-blue);
+}
+
+.cart button {
+    border: 1px solid var(--cyber-deep-blue);
+}
+
+.cart-header {
+    display: flex;
+    justify-content: space-between;
 }
