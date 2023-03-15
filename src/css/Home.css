@@ -26,6 +26,7 @@
     --cyber-blue: rgb(0, 240, 255);
     --cyber-deep-blue: rgb(0, 100, 107);
     --cyber-yellow: rgb(252, 238, 10);
+    --cyber-deep-yellow: rgb(110, 105, 0);
     --cyber-deep-dark: black;
     --cyber-mid-dark: rgb(45, 55, 59);
 }
@@ -151,14 +152,60 @@ p {
 }
 
 button {
-    background-color: var(--cyber-blue);
+    background-color: var(--cyber-yellow);
 	border: none;
 	padding: 0px 10px;
 	font-size: 26px;
 	cursor: pointer;
 }
 
-button > div {
+button > div, button {
 	color: var(--cyber-deep-blue);
     transform: translate(0, -5%);
+}
+
+.items-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.item p {
+    font-size: 20px;
+}
+
+.item h4 {
+    font-size: 24px;
+}
+
+.item-category h3 {
+    margin-bottom: 24px;
+}
+
+.item {
+    padding: 8px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid var(--cyber-yellow);
+    border-left: 1px solid var(--cyber-yellow);
+}
+
+.item {
+    width: min(100%, 800px);
+    display: flex;
+}
+
+.item-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.item-controls {
+    align-self: flex-end;
+}
+
+img {
+    display: block;
+    width: min(40%, 192px);
+    height: min(40%, 192px);
 }
