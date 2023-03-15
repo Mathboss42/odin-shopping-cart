@@ -6,29 +6,30 @@ import { createMemoryHistory } from '@remix-run/router';
 import { screen } from '@testing-library/react';
 import Store from '../components/Store';
 import '@testing-library/jest-dom'
+import { act } from 'react-test-renderer';
 
 describe('Show Cart', () => {
-    it('Should display cart when \'show cart\' button is pressed', () => {
+    it('Should display cart when \'show cart\' button is pressed', async () => {
         const history = createMemoryHistory({ initialEntries: ['/store'] });
         render(
             <Router location={history.location} navigator={history}>
                 <Store />
             </Router>
         );
-        userEvent.click(screen.getByRole('button', { name: /show cart/i}));
+        await userEvent.click(screen.getByRole('button', { name: /show cart/i}));
         expect(screen.getByText(/my awesome cart/i)).toBeInTheDocument();
         expect(screen.getByRole('button', { name:/close cart/i })).toBeInTheDocument();
     });
     
-    it('Should close cart when \'close cart\' button is pressed', () => {
+    it('Should close cart when \'close cart\' button is pressed', async () => {
         const history = createMemoryHistory({ initialEntries: ['/store'] });
         render(
             <Router location={history.location} navigator={history}>
                 <Store />
             </Router>
         );
-        userEvent.click(screen.getByRole('button', { name: /show cart/i}));
-        userEvent.click(screen.getByRole('button', { name: /close cart/i}));
-        expect(screen.queryByText(/cart/i)).not.toBeInTheDocument();
+        await userEvent.click(screen.getByRole('button', { name: /show cart/i}));
+        await userEvent.click(screen.getByRole('button', { name: /close cart/i}));
+        expect(screen.queryByText(/my awesome cart/i)).not.toBeInTheDocument();
     });
 })
