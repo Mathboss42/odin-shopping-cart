@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Homepage Elements Contains three blocks of text inside terminal 1`] = `
+<div>
+  <div
+    class="home content-container"
+  >
+    <div
+      class="nav"
+    >
+      <h1>
+        CyberShop
+        <span
+          class="small-number"
+        >
+          2023
+        </span>
+      </h1>
+      <ul>
+        <li
+          class="selected"
+        >
+          <a
+            href="/home"
+          >
+            HOME
+          </a>
+        </li>
+        <li>
+          <a
+            href="/store"
+          >
+            STORE
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div
+      class="terminal"
+    >
+      <div
+        class="blocks-container"
+      >
+        <div
+          class="text-block"
+          id="description"
+        >
+          <h3>
+            DESCRIPTION
+          </h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique vero mollitia, aliquid nostrum autem fugiat, enim iure deleniti veniam maxime, sequi atque tempora ut! Culpa?
+          </p>
+        </div>
+        <div
+          class="text-block"
+          id="values"
+        >
+          <h3>
+            VALUES
+          </h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique vero mollitia, aliquid nostrum autem fugiat, enim iure deleniti veniam maxime, sequi atque tempora ut! Culpa? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero, perferendis.
+          </p>
+        </div>
+        <div
+          class="text-block"
+          id="how"
+        >
+          <h3>
+            HOW
+          </h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique vero mollitia, aliquid nostrum autem fugiat, enim iure deleniti veniam maxime, sequi atque tempora ut! Culpa? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero, perferendis.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
