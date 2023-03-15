@@ -244,3 +244,9 @@ img {
     display: flex;
     justify-content: space-between;
 }
+
+.cart-item-image {
+    display: block;
+    width: min(30%, 100px);
+    height: min(30%, 100px);
+}

@@ -2,6 +2,7 @@ import Nav from './Nav';
 import Terminal from './Terminal';
 import Item from './Item';
 import Cart from './Cart';
+import CartItem from './CartItem';
 import { useState } from 'react';
 
 function Store() {
@@ -19,7 +20,38 @@ function Store() {
 
     const handleAddItem = (name) => {
         console.log('called')
-        setCartContents([...cartContents, name]);
+        if (cartContents.length < 1 || !cartContents.some(el => el.name === name)) {
+            setCartContents([...cartContents, { name: name, quantity: 1}]);
+        } else {
+            setCartContents(cartContents.map(el => {
+                if (el.name === name) {
+                    return {
+                        name: el.name,
+                        quantity: el.quantity + 1
+                    }
+                } else {
+                    return el;
+                }
+            }))
+        }
+    }
+
+    const handleRemoveItem = (name) => {
+        console.log('remove')
+        if (cartContents.some(el => el.name === name && el.quantity > 1)) {
+            setCartContents(cartContents.map(el => {
+                if (el.name === name) {
+                    return {
+                        name: el.name,
+                        quantity: el.quantity - 1
+                    }
+                } else {
+                    return el;
+                }
+            }));
+        } else {
+            setCartContents(cartContents.filter(el => el.name !== name));
+        }
     }
 
     return (
@@ -40,7 +72,11 @@ function Store() {
                         </div>
                     </div>
                     {showCart
-                        ? <Cart contents={cartContents} onClickCloseCart={handleCloseCart}/>
+                        ? <Cart onClickCloseCart={handleCloseCart} cartContents={cartContents}>
+                            {cartContents.map((el, index) => {
+                                return <CartItem name={el.name} quantity={el.quantity} key={index} onClickRemoveItem={handleRemoveItem}/>
+                            })}
+                            </Cart>
                         : <button id='show-cart-button' onClick={handleShowCart}>Show Cart</button>
                     }
                 </div>

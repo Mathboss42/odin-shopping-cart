@@ -1,5 +1,3 @@
-import Item from "./Item";
-
 function Cart(props) {
     return (
         <div className='cart'>
@@ -8,12 +6,13 @@ function Cart(props) {
                 <button onClick={props.onClickCloseCart}>Close Cart</button>
             </div>
             <div className="cart-contents">
-                {props.contents.map((el, index) => {
-                    return <Item name={el} key={index}/>
-                })}
+                {props.children}
             </div>
             <div className="checkout">
-                <button>Checkout</button>
+                {props.cartContents.length > 0
+                    ? <button>Checkout</button>
+                    : null
+                }
             </div>
         </div>
     );
